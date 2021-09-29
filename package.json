@@ -2,7 +2,7 @@
   "name": "project",
   "version": "1.0.0",
   "private": true,
-  "homepage": "",
+  "homepage": "https://yevheniiaivanova.github.io/weather-app/",
   "scripts": {
     "start": "react-scripts start",
     "lint:scripts": "eslint . --fix",
