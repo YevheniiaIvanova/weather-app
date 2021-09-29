@@ -1,0 +1,21 @@
+.header {
+  background-color: var(--main-color);
+  font-size: 22px;
+  height: 75px;
+  line-height: var(--header-height);
+  padding-bottom: 15px;
+  padding-top: 15px;
+  position: relative;
+  text-align: center;
+}
+
+.link {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.title {
+  font-size: 1.75em;
+}

@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #eee;
+  color: white;
+  font-family: Comic Sans MS, cursive, sans-serif;
+}
+
+input,
+button {
+  color: inherit;
+  font-family: Comic Sans MS, cursive, sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+:root {
+  --header-height: 38px;
+  --footer-height: 28px;
+  --main-color: #5f6df2;
+}

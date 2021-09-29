@@ -1,0 +1,20 @@
+.weather-card {
+  background: linear-gradient(15deg, #8cd0f7, #5a50ef);
+  border-radius: 30px;
+  height: 500px;
+  line-height: 2;
+  padding: 20px;
+  text-align: center;
+  width: 320px;
+}
+
+.location {
+  font-size: 33px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.date {
+  margin-bottom: 8px;
+}

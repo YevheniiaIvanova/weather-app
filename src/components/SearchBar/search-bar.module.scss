@@ -1,0 +1,33 @@
+.search-bar {
+  display: flex;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.input {
+  border: 1px solid #ddd;
+  border-radius: 45px 0 0 45px;
+  color: var(--main-color);
+  font-size: 18px;
+  padding: 9px 25px;
+  width: 210px;
+}
+
+.input:focus-visible {
+  outline: 1px solid #ddd;
+}
+
+.button {
+  background-color: var(--main-color);
+  border: 0;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  width: 105px;
+}
+
+.button:hover {
+  background-color: #3935a3;
+}

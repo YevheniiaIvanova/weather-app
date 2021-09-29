@@ -1,0 +1,98 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "private": true,
+  "homepage": "",
+  "scripts": {
+    "start": "react-scripts start",
+    "lint:scripts": "eslint . --fix",
+    "lint:styles": "stylelint src/**/*.scss --fix",
+    "prettify": "prettier --write .",
+    "test": "react-scripts test --watchAll=false",
+    "code-coverage": "yarn test -- --coverage",
+    "build": "react-scripts build",
+    "deploy": "yarn build && gh-pages -d build",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "axios": "^0.21.4",
+    "classnames": "^2.3.1",
+    "immer": "^8.0.1",
+    "nanoid": "^3.1.22",
+    "node-sass": "^5.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "4.0.3",
+    "typescript": "^4.1.2"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.13.0",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/react-hooks": "^7.0.0",
+    "@testing-library/user-event": "^12.8.1",
+    "@types/classnames": "^2.3.1",
+    "@types/jest": "^26.0.20",
+    "@types/node": "^14.14.32",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.1",
+    "@types/react-router-dom": "^5.1.9",
+    "@typescript-eslint/eslint-plugin": "^4.17.0",
+    "@typescript-eslint/parser": "^4.17.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "gh-pages": "^3.1.0",
+    "husky": "^4.3.8",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-sass-guidelines": "^8.0.0",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.19.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn test && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.+(ts|tsx)": [
+      "yarn lint:scripts",
+      "git add"
+    ],
+    "*.+(scss)": [
+      "yarn lint:styles",
+      "git add"
+    ],
+    "*.+(html|json|md)": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/src/components/Header/",
+      "<rootDir>/src/constants/",
+      "<rootDir>/src/index.tsx",
+      "<rootDir>/src/setupIcons.ts"
+    ]
+  }
+}
